@@ -8,6 +8,7 @@
 
 body > .container{
 	padding-top:60px;
+	color: #fff
 }
 .1h1{
 	color:#03C;
@@ -19,17 +20,32 @@ body > .container{
 }
 .navround{
 	border-bottom-left-radius:15px;
-	border-bottom-right-radius:15px;	
+	border-bottom-right-radius:15px;
+}
+.nav > li > a{
+	color: #fff
+}
+.center.navbar .nav,
+.center.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+.center {
+    text-align:center;
 }
 body{
-	background-image:url(../img/back1.gif);
+	background-image:url(../img/gradient1.jpg);
 }
 .btn-inverse{
 	background-color:#222;
-	color:#69F;	
+	color:#69F;
 }
 .btn-inverse:hover{
-	color:#4795f4;	
+	color:#4795f4;
 }
 .vertical .carousel-inner {
   height: 100%;
