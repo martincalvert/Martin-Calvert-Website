@@ -19,7 +19,7 @@
     <div class="container" id="home">
       <nav class="navbar navbar-fixed-top center" role="navigation">
         <div class="container">
-          <div class="navbar-collapse collapse center">
+          <div id="navbar" class="">
             <ul class="nav navbar-nav">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">My Story</a></li>
@@ -31,7 +31,7 @@
         </div>
       </nav><!--navbar-->
     </div>
-    <div class="sections center">
+    <div id="first" class="sections center">
       <div class="container">
         <h1>Martin Calvert</h1>
         <h5>Full Stack Software Engineer & Tech Solutions Designer</h5>
@@ -45,7 +45,7 @@
     </div>
     <div id="about" class="sections center content">
       <div class="container">
-        <h2>About Myself!</h2>
+        <h2 id="aboutss">About Myself!</h2>
         <p>Born and raised in Southern California, graduated from Woodcrest Christian High School in 2008. After high school I got a job at a screen printing shop, where I was first introduced to the pantone system and vector art, from there I started my schooling at Riverside Community College and decided I wanted to be a Computer Science Major. At RCC I took classes in Office, Dreamweaver, and Photoshop, on my way to a Associates in Science of Computer Information Systems. After of which I promptly transferred to Cal State San Bernardino to continue my studies in Computer Systems. I graduate with my Bachelor of Arts in Computer Systems with a Web Development option in June 2014. This degree is similar to a computer science degree but instead of physics classes it has art and communication classes, so this degree is catered more towards front-end or mid development. The most important thing I have learned in college, would be the ability to learn a topic in 10 weeks or less and be fully competent in it by then. </p>
         <p>I have been working on computers and their systems for the majority of my life, it is not just my field of study it is also a hobby which I love. So this is my passion in which I want to have a career in for the rest of my life. </p>
         <p>I have experience building hardware systems and networks for small business. I also have worked as a Webmaster for companies in the past, you can view these works on my <a href="#works">portfolio page</a>. Other experience I have gained would be through school, I have been the team lead of many group projects which included topics such as database design & administration, iOS application development and system networking.
@@ -66,7 +66,7 @@
     </div>
     <div id="works" class="sections center white-content">
       <div class="container">
-        <h1>Portfolio</h1>
+        <h1 id="workss">Portfolio</h1>
         <p>For most of my portfolio work I will point you in the direction of my <a href="://github.com/sdla4ever">GitHub</a>. I also have a Stack Overflow and HackerRank. I have done work as a webmaster for many small companies, which included managine their websites, email accounts, databases, and building web apps.
         At Disney Interactive I have worked on numerous initiatives to improve the in house built CMS which runs on a stack that includes HA, Nginx, Mongo, and Ruby. During college I was the team leader for the majority of group projects I worked on and more then comfortable working as the source of information for a project and can easily provide myself self-motivation.
         I have worked on a multitude of consulting projects that included building backend web services, mobile applications, and network solutions. You can also catch some of my technical writings on my personal <a href="http://www.blog.martin-calvert.com">blog</a> or on <a href="http://www.adroitly.info">Adroitly.info</a> where my articles are also posted.</p>
@@ -108,7 +108,7 @@
     </div>
     <div id="contact" class="sections center content">
       <div class="container">
-      <h2>Contacting Me</h2>
+      <h2 id="contactss">Contacting Me</h2>
           <p>As prevously stated I am interesting in all sorts of consulting work so, so please feel free to contact me either through my <a href="mailto:martin@martin-calvert.com">email</a> or my <a href="http://linkedin.com/pub/martin-calvert/86/972/741/">LinkedIn</a> profile. I will be quick to respond to all legitimate messages. For more informal communications I welcome comments on my articles or even talking to me throug my <a href="https://twitter.com/sdla4ever">twitter</a></p>
       </div>
     </div>
@@ -117,22 +117,16 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
       var menu = false
-      function isElementInViewport(sel) {
-          var el = $(sel)
-          //special bonus for those using jQuery
-          if (typeof jQuery === "function" && el instanceof jQuery) {
-              el = el[0];
-          }
-
-          var rect = el.getBoundingClientRect();
-
-          if (inView(rect)){
-            changeNav(el)
+      function isElementInViewport(pos) {
+          if (pos > $(window).height()){
+            changeNav(false)
+          }else{
+            changeNav(true)
           };
       }
 
       function changeNav(e){
-        if (e.id == 'home'){
+        if (e == true){
           $('nav').fadeIn(1000, function() {
             $(this).removeClass("nav-black");
             menu = false
@@ -145,26 +139,8 @@
         }
       }
 
-      function inView (rect) {
-        console.log(rect.bottom)
-        console.log(window.innerHeight)
-        console.log(document.documentElement.clientHeight)
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= $(window).height() &&
-            rect.right <= $(window).width()
-        )
-      };
-
       function handleChange(){
-        if (!menu){
-          isElementInViewport('#abouts')
-          isElementInViewport('#works')
-          isElementInViewport('#contact')
-        }else{
-          isElementInViewport('#home')
-        }
+          isElementInViewport(window.pageYOffset)
       }
 
       //jQuery
