@@ -1,0 +1,80 @@
+body{
+	height: 100%;
+	width: 100%;
+}
+body > .container{
+	padding-top:60px;
+}
+.row{
+	margin-top: 15px;
+}
+.row > .col-sm-4{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.container{
+	color: #fff;
+}
+.content{
+	background-color: #000;
+	padding-top:60px;
+	color: #fff;
+}
+.white-content{
+	background-color: #fff;
+	padding-top:60px;
+	color: #000;
+}
+.white-content > .container{
+	color: #000;
+}
+.white-content > .container > p > a{
+	color: #111;
+}
+p{
+	font-size: 15px;
+}
+a{
+	color: #ddd;
+}
+a:hover{
+	color: #eee;
+	text-decoration: none;
+}
+
+.sections{
+	min-height: 95vh;
+	width: 100vw;
+}
+.nav-black{
+	background-color: #000;
+}
+.color{
+	background-color:#f8f8f8;
+	border-radius:10px;
+	color:#4795F4;
+}
+.navround{
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+}
+.nav > li > a{
+	color: #fff;
+}
+.nav > li > a:hover{
+	color: #eee;
+	background-color:transparent;
+}
+.center .nav,
+.center .nav > li {
+    float:none;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.center {
+    text-align:center;
+}
+body{
+	background-image:url(../img/gradient1.jpg);
+}
