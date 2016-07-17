@@ -41,6 +41,12 @@
           After you take a look at some of my previous works you can contact me through my <a href="mailto:martin@martin-calvert.com">e-mail</a> or you can use the <a href="#contact">contact page</a>.
           So go ahead take a look around, looking forward to working on your projects!
         </p>
+        <div class="text-editor-wrap">
+    			<div class="title-bar"><span class="title">Martin — bash — 80x<span class="terminal-height">25</span></span></div>
+    			<div class="text-body">
+    				$ I have used <span class="typed"></span>
+    			</div>
+    		</div>
     </div>
     </div>
     <div id="about" class="sections center content">
@@ -115,6 +121,30 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/typed.min.js"></script>
+    <script>
+
+      var strings = [
+                     "Docker", "HTML5", "CSS3", "jQuery", "Swift",
+                     "Ruby", "Python", "Javascript", "Angular",
+                     "Chef", "Linux", "Bash", "Consul", "Terraform",
+                     "KitchenCI", "Jenkins", "Git", "AWS", "Google Cloud Platform",
+                     "Mongo", "PostgreSQL", "Java", "Scrum", "Kanban",
+                     "Jira", "Ruby on Rails", "Flask", "Vault", "Serverspec",
+                     "MySQL", "Wordpress", "PHP"
+                    ]
+      $(function(){
+          $(".typed").typed({
+            strings: strings,
+            typeSpeed: 65,
+            shuffle: true,
+            loop: true,
+            cursorChar: "_",
+            backSpeed: 40,
+            backDelay: 725
+          });
+      });
+    </script>
     <script>
       var menu = false
       function isElementInViewport(pos) {
