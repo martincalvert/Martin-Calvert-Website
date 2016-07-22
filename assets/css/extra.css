@@ -12,53 +12,53 @@ body > .container{
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-.container{
+.container {
 	color: #fff;
 }
-.content{
+.content {
 	background-color: #000;
 	padding-top:60px;
 	color: #fff;
 	box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
 }
-.white-content{
+.white-content {
 	background-color: #fff;
 	padding-top:60px;
 	color: #000;
 }
-.white-content > .container{
+.white-content > .container {
 	color: #000;
 }
-.white-content > .container > p > a{
+.white-content > .container > p > a {
 	color: #111;
 }
-p{
+p {
 	font-size: 15px;
 }
-a{
+a {
 	color: #ddd;
 }
-a:hover{
+a:hover {
 	color: #eee;
 	text-decoration: none;
 }
 
-.sections{
+.sections {
 	min-height: 95vh;
 	width: 100vw;
 }
-.nav-black{
+.nav-black {
 	background-color: #000000;
 	-webkit-animation: navfade 0.4s 1;
 	-moz-animation: navfade 0.4s 1;
 	animation: navfade 0.4s 1;
 }
-.color{
+.color {
 	background-color:#f8f8f8;
 	border-radius:10px;
 	color:#4795F4;
 }
-.navround{
+.navround {
 	border-bottom-left-radius:15px;
 	border-bottom-right-radius:15px;
 }

@@ -155,16 +155,11 @@
       }
 
       function changeNav(e){
-        if (e == true){
-          $('nav').fadeIn(1000, function() {
-            $(this).removeClass("nav-black");
-            menu = false
-          });
-        }else{
-          $('nav').fadeIn(1000, function() {
-            $(this).addClass("nav-black");
-            menu = true
-          });
+        if (e == true) {
+          menu = false
+        } else {
+          $('nav').addClass("nav-black");
+          menu = true
         }
       }
 
