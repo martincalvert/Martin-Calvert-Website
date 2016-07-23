@@ -155,9 +155,12 @@
       }
 
       function changeNav(e){
-        if (e == true) {
+        if (e == true){
+          $('nav').addClass("nav-clear");
+          $('nav').removeClass("nav-black");
           menu = false
-        } else {
+        }else{
+          $('nav').removeClass("nav-clear");
           $('nav').addClass("nav-black");
           menu = true
         }

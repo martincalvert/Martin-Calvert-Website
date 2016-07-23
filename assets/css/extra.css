@@ -33,7 +33,7 @@ body > .container{
 	color: #111;
 }
 p {
-	font-size: 15px;
+	font-size: 16px;
 }
 a {
 	color: #ddd;
@@ -46,12 +46,6 @@ a:hover {
 .sections {
 	min-height: 95vh;
 	width: 100vw;
-}
-.nav-black {
-	background-color: #000000;
-	-webkit-animation: navfade 0.4s 1;
-	-moz-animation: navfade 0.4s 1;
-	animation: navfade 0.4s 1;
 }
 .color {
 	background-color:#f8f8f8;
@@ -89,6 +83,25 @@ body{
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+
+.nav-black {
+	background-color: #000000;
+	-webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.nav-clear {
+	background: transparent !important;
+	-webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
@@ -103,40 +116,6 @@ body{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
-}
-
-@keyframes navfade{
-	0%   {opacity: 0;}
-	15%  {opacity: 0.15;}
-	25%  {opacity: 0.25;}
-	40%  {opacity: 0.40;}
-	50%  {opacity: 0.50;}
-	60%  {opacity: 0.60;}
-	75%  {opacity: 0.75;}
-	90%  {opacity: 0.90;}
-	100% {opacity: 1;}
-}
-@-webkit-keyframes navfade{
-	0%   {opacity: 0;}
-	15%  {opacity: 0.15;}
-	25%  {opacity: 0.25;}
-	40%  {opacity: 0.40;}
-	50%  {opacity: 0.50;}
-	60%  {opacity: 0.60;}
-	75%  {opacity: 0.75;}
-	90%  {opacity: 0.90;}
-	100% {opacity: 1;}
-}
-@-moz-keyframes navfade{
-	0%   {opacity: 0;}
-	15%  {opacity: 0.15;}
-	25%  {opacity: 0.25;}
-	40%  {opacity: 0.40;}
-	50%  {opacity: 0.50;}
-	60%  {opacity: 0.60;}
-	75%  {opacity: 0.75;}
-	90%  {opacity: 0.90;}
-	100% {opacity: 1;}
 }
 
 .text-editor-wrap {
