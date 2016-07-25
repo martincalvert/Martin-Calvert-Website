@@ -21,9 +21,9 @@
         <div class="container">
           <div id="navbar" class="">
             <ul class="nav navbar-nav">
-              <li><a href="#about">About</a></li>
-              <li><a href="#works">Works</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#" data-target="#about">About</a></li>
+              <li><a href="#" data-target="#works">Works</a></li>
+              <li><a href="#" data-target="#contact">Contact</a></li>
               <li><a href="http://blog.martincalvert.io">Blog</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -169,6 +169,20 @@
       function handleChange(){
           isElementInViewport(window.pageYOffset)
       }
+
+      (function($) {
+        $.fn.goTo = function() {
+            $('html, body').animate({
+                scrollTop: $(this).offset().top - 50 + 'px'
+            }, 'fast');
+            return this;
+        }
+      })(jQuery);
+
+      $(document).delegate('li a', 'click', function(e){
+        e.preventDefault();
+        $($(this).data()['target']).goTo()
+      })
 
       //jQuery
       $(window).on('DOMContentLoaded load resize scroll', handleChange);
