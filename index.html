@@ -24,7 +24,7 @@
               <li><a href="#" data-target="#about">About</a></li>
               <li><a href="#" data-target="#works">Works</a></li>
               <li><a href="#" data-target="#contact">Contact</a></li>
-              <li><a href="http://blog.martincalvert.io">Blog</a></li>
+              <li><a href="//blog.martincalvert.io">Blog</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -58,13 +58,13 @@
         To request a quote for services please use the <a href="#contact">contact form</a></p>
         <div class="row" id="abouts">
           <div class=" col-sm-4">
-             <a style="margin-top:5px;" href="http://linkedin.com/pub/martin-calvert/86/972/741/"><img src="assets/img/linkedin.png" width='120' alt="Linkedin Logo"></a>
+             <a style="margin-top:5px;" href="//linkedin.com/pub/martin-calvert/86/972/741/"><img src="assets/img/linkedin.png" width='120' alt="Linkedin Logo"></a>
           </div>
           <div class="col-sm-4 text-center">
-            <a style="margin-top:5px;" href="http://github.com/sdla4ever"><img src="assets/img/github-white.png" alt="Github Logo"></a>
+            <a style="margin-top:5px;" href="//github.com/sdla4ever"><img src="assets/img/github-white.png" alt="Github Logo"></a>
           </div>
           <div class="col-sm-4 text-center">
-              <a style="margin-top:5px;" href="http://hackerrank.com/sdla4ever"><img src="assets/img/hackerrank.png" width='120' alt="HackerRank Logo"></a>
+              <a style="margin-top:5px;" href="//hackerrank.com/sdla4ever"><img src="assets/img/hackerrank.png" width='120' alt="HackerRank Logo"></a>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
     <div id="works" class="sections center white-content">
       <div class="container">
         <h1>Portfolio</h1>
-        <p>For most of my portfolio work I will point you in the direction of my <a href="://github.com/sdla4ever">GitHub</a>. I also have a Stack Overflow and HackerRank. I have done work as a webmaster for many small companies, which included managing their websites, email accounts, databases, and building web apps.
+        <p>For most of my portfolio work I will point you in the direction of my <a href="//github.com/sdla4ever">GitHub</a>. I also have a Stack Overflow and HackerRank. I have done work as a webmaster for many small companies, which included managing their websites, email accounts, databases, and building web apps.
         At Disney Interactive I have worked on numerous initiatives to improve the in house built CMS which runs on a stack that includes HA, Nginx, Mongo, and Ruby. During college I was the team leader for the majority of group projects I worked on and more than comfortable working as the source of information for a project and can easily provide myself self-motivation.
         I have worked on a multitude of consulting projects that included building backend web services, mobile applications, and network solutions. You can also catch some of my technical writings on my personal <a href="http://www.blog.martin-calvert.com">blog</a> or on <a href="http://www.adroitly.info">Adroitly.info</a> where my articles are also posted.</p>
         <div class="row">
@@ -100,13 +100,13 @@
         </div>
         <div class="row">
           <div class="col-sm-4 text-center">
-            <a style="margin-top:5px;" href="http://github.com/sdla4ever"><img src="assets/img/github-black.png" alt="Github Logo"></a>
+            <a style="margin-top:5px;" href="//github.com/sdla4ever"><img src="assets/img/github-black.png" alt="Github Logo"></a>
           </div>
           <div class=" col-sm-4">
-             <a style="margin-top:5px;" href="http://stackoverflow.com/users/1947373/sdla4ever"><img src="assets/img/stack.png" width='120' alt="Stack Overflow Logo"></a>
+             <a style="margin-top:5px;" href="//stackoverflow.com/users/1947373/sdla4ever"><img src="assets/img/stack.png" width='120' alt="Stack Overflow Logo"></a>
           </div>
           <div class="col-sm-4 text-center">
-              <a style="margin-top:5px;" href="http://hackerrank.com/sdla4ever"><img src="assets/img/hackerrank.png" width='120' alt="Stackoverflow Logo"></a>
+              <a style="margin-top:5px;" href="//hackerrank.com/sdla4ever"><img src="assets/img/hackerrank.png" width='120' alt="Stackoverflow Logo"></a>
           </div>
         </div>
       </div>
@@ -181,8 +181,10 @@
       })(jQuery);
 
       $(document).delegate('li a', 'click', function(e){
-        e.preventDefault();
-        $($(this).data()['target']).goTo()
+        if($(this).data()['target'] != null){
+          $($(this).data()['target']).goTo()
+          e.preventDefault();
+        }
       })
 
       //jQuery
