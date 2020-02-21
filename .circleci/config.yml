@@ -24,6 +24,5 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt install -y rsync
       - run: ssh-keyscan -H home502473674.1and1-data.host >> ~/.ssh/known_hosts
-      - run: cp assets/css/bootstrap.css pay
-      - run: cp assets/css/bootstrap.min.js pay 
+      - run: cp -r ~/repo/assets ~/repo/pay
       - run: rsync -avz -e "ssh" ~/repo/* u75336870@home502473674.1and1-data.host:MLC/
