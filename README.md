@@ -4,7 +4,7 @@ Website content for my portfolio site
 
 | Status | Task |
 |--|--|
-| [![CircleCI](https://circleci.com/gh/martincalvert/Martin-Calvert-Website/tree/master.svg?style=svg)](https://circleci.com/gh/martincalvert/Martin-Calvert-Website/tree/master) | Deploy master |
+| ![CD](https://github.com/martincalvert/Martin-Calvert-Website/workflows/CD/badge.svg) | Deploy master |
 
 #### Tech Stack
 * HTML5
